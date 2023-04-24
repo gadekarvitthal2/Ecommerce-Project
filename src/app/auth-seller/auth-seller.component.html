@@ -1,0 +1,63 @@
+<div class="form-main">
+  <ng-container *ngIf="!isLogin">
+    <form #formSignUpData="ngForm" (ngSubmit)="formAllSignupData(formSignUpData)">
+      <h1 class="seller-heading">Seller SignUp</h1>
+      <input
+        type="text"
+        id="one"
+        class="form-input"
+        name="name"
+        ngModel
+        placeholder="Enter Name"
+      />
+      <input
+        type="password"
+        class="form-input"
+        name="password"
+        ngModel
+        placeholder="Enter Password"
+      />
+      <input
+        type="text"
+        class="form-input"
+        name="email"
+        ngModel
+        placeholder="Enter Email"
+      />
+      <button type="submit">Submit</button>
+      <p class="signup-click">Alrady Login <a (click)="goToSignIn()">Click here</a></p>
+    </form>
+  </ng-container>
+  <ng-container *ngIf="isLogin">
+    <form #formLoginData="ngForm" (ngSubmit)="formAllSignInData(formLoginData)">
+      <h1 class="seller-heading">Seller SignIn</h1>
+      <input
+        type="text"
+        class="form-input"
+        name="email"
+        #email="ngModel" [(ngModel)]="LoginFormdata.email"
+        placeholder="Enter Email"
+        required
+      />
+    <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
+      <p *ngIf="email.errors?.['required']">First name is required</p>
+    </div>
+      <input
+        type="password"
+        class="form-input"
+        name="password"
+        placeholder="Enter Password"
+        #password="ngModel" [(ngModel)]="LoginFormdata.password"
+        required
+      />
+    <div class="form-control-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
+      <p *ngIf="password.errors?.['required']">First name is required</p>
+    </div>
+    <div class="form-control-feedback" *ngIf="formLoginData.valid && (formLoginData.dirty || formLoginData.touched)">
+      <p *ngIf="isValidUsernamePassword">Invalid Username or Password</p>
+    </div>
+      <button type="submit">Submit</button>
+      <p class="signin-click">Don't I have an Account<a (click)="goToSignUp()">Signup</a></p>
+    </form>
+  </ng-container>
+</div>

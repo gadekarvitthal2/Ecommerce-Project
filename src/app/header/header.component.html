@@ -1,0 +1,24 @@
+<div class="main-nav">
+  <nav class="circle">
+    <h1 routerLink="/">Ecomm</h1>
+    <ng-container [ngSwitch]="menyType">
+      <ng-container *ngSwitchCase="'default'">
+        <input type="text" class="search" />
+        <button class="serach-btn1">Search</button>
+        <ul class="snip1189">
+          <li><a [routerLink]="['/']">Home</a></li>
+          <li><a [routerLink]="['/auth-seller']">Seller</a></li>
+          <li><a href="">Login</a></li>
+          <li><a href="">Card(0)</a></li>
+        </ul>
+      </ng-container>
+
+      <ul *ngSwitchCase="'seller'" class="seller-header snip1189">
+        <li><a [routerLink]="['/seller-home']">Product List</a></li>
+        <li><a [routerLink]="['/seller-add']">Add User</a></li>
+        <li><a href="" (click)="sellerLogout()">Logout</a></li>
+        <li><a href="">{{this.sellerName}}</a></li>
+      </ul>
+    </ng-container>
+  </nav>
+</div>

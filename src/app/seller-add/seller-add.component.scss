@@ -1,0 +1,69 @@
+.product-heading{
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  color: blueviolet;
+  margin-bottom: 20px;
+}
+.form-main form {
+  display: flex;
+  justify-content: center !important;
+  flex-direction: column;
+  align-items: center;
+  // margin: auto;
+}
+.form-main form .form-input {
+  width: 20em;
+  height: 40px;
+  margin-bottom: 10px;
+  border-color: blueviolet;
+  color: blueviolet;
+  border-radius: 20px;
+}
+.form-main form button {
+  width: 20em;
+  height: 40px;
+  border-color: blueviolet;
+  border-radius: 20px;
+}
+
+@keyframes example {
+  from {background-color: rgb(85, 255, 0);}
+  to {background-color: rgb(35, 112, 213);}
+}
+.form-main form button:hover{
+animation-name: example;
+animation-duration: 1s;
+}
+.error div{
+  color: red;
+}
+
+// css for the sucess alert message
+.alert  {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0.5rem;
+  border:1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  padding: 2rem;
+  background: green;
+  color: white;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+  transition:  all 0.2s ease-in-out;
+  opacity: 0;
+  height: 0px;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+}
+
+.alert i{
+  margin-left: 5px;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(1.25rem);
+}

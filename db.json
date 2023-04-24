@@ -1,0 +1,70 @@
+{
+  "seller": [
+    {
+      "name": "vitthal",
+      "email": "vitthal@gmail.com",
+      "password": "Gadekar@444",
+      "id": 1
+    },
+    {
+      "name": "shyam",
+      "email": "shyam@gmail.com",
+      "password": "Gadekar@444",
+      "id": 2
+    },
+    {
+      "name": "satyam chobe",
+      "password": "122345",
+      "email": "gadekar@gmail.com",
+      "id": 3
+    },
+    {
+      "username": "sdsd",
+      "password": "sds",
+      "id": 4
+    },
+    {
+      "username": "asd",
+      "password": "asdf",
+      "id": 5
+    },
+    {
+      "name": "sdfasdas",
+      "password": "asdf",
+      "email": "asdf",
+      "id": 6
+    },
+    {
+      "name": "xcvb",
+      "password": "xcvbxcvb",
+      "email": "xcvbcxvb",
+      "id": 7
+    },
+    {
+      "name": "Kevin",
+      "password": "asdf",
+      "email": "a",
+      "id": 8
+    }
+  ],
+  "products": [
+    {
+      "name": "Apple",
+      "price": "100000",
+      "category": "Mobile",
+      "color": "Black",
+      "description": "This is very branded phone",
+      "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "id": 1
+    },
+    {
+      "name": "MI",
+      "price": "20000",
+      "category": "Mobile",
+      "color": "Red",
+      "description": "This is Good product Made in india",
+      "image": "https://images.unsplash.com/photo-1544866092-1935c5ef2a8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80",
+      "id": 2
+    }
+  ]
+}
