@@ -7,6 +7,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerGuard } from './seller.guard';
 import { SellerAddComponent } from './seller-add/seller-add.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
+import { SellerEditComponent } from './seller-edit/seller-edit.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'seller-home',component:SellerHomeComponent,canActivate:[SellerGuard]},
   {path:'seller-add',component:SellerAddComponent},
   {path:'seller-list',component:SellerListComponent},
+  {path:'seller-edit/:id',component:SellerEditComponent},
   {path:'**',component:InvalidpathComponent}
 ];
 

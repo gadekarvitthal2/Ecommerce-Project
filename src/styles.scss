@@ -1,4 +1,5 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap/dist/css/bootstrap.css";
 html,body {
   background: url(./assets/background2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -6,3 +7,9 @@ html,body {
   -o-background-size: cover;
   background-size: cover;
 }
+//
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background-color:#3e14d88a;
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

@@ -1,0 +1,110 @@
+<h1 class="product-heading">Update Product Details</h1>
+<div class="form-main">
+  <form [formGroup]="sellerEditFormInfo">
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Product Name"
+      formControlName="name"
+      required
+    />
+
+    <div
+      *ngIf="
+        sellerEditFormInfo.get('name')?.touched &&
+        sellerEditFormInfo.get('name')?.touched
+      " class="error"
+    >
+      <div *ngIf="sellerEditFormInfo.get('name')?.hasError('required')">
+        You need to Enter Name
+      </div>
+    </div>
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Price"
+      formControlName="price"
+    />
+    <div
+      *ngIf="
+        sellerEditFormInfo.get('price')?.touched &&
+        sellerEditFormInfo.get('price')?.touched
+      " class="error"
+    >
+      <div *ngIf="sellerEditFormInfo.get('price')?.hasError('required')">
+        You need to Enter Price
+      </div>
+    </div>
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Category"
+      formControlName="category"
+    />
+    <div
+      *ngIf="
+        sellerEditFormInfo.get('category')?.touched &&
+        sellerEditFormInfo.get('category')?.touched
+      " class="error"
+    >
+      <div *ngIf="sellerEditFormInfo.get('category')?.hasError('required')">
+        You need to Enter Categoery
+      </div>
+    </div>
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Color"
+      formControlName="color"
+    />
+    <div
+      *ngIf="
+        sellerEditFormInfo.get('color')?.touched &&
+        sellerEditFormInfo.get('color')?.touched
+      " class="error"
+    >
+      <div *ngIf="sellerEditFormInfo.get('color')?.hasError('required')">
+        You need to enter color
+      </div>
+    </div>
+    <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Description"
+      formControlName="description"
+    />
+    <div
+      *ngIf="
+        sellerEditFormInfo.get('description')?.touched &&
+        sellerEditFormInfo.get('description')?.touched
+      " class="error"
+    >
+      <div *ngIf="sellerEditFormInfo.get('description')?.hasError('required')">
+        You need to enter Description
+      </div>
+    </div>
+    <textarea
+      type="text"
+      class="form-input"
+      placeholder="Enter Image URL"
+      formControlName="image"
+    ></textarea>
+    <div
+      *ngIf="
+        sellerEditFormInfo.get('image')?.touched &&
+        sellerEditFormInfo.get('image')?.touched
+      " class="error"
+    >
+      <div *ngIf="sellerEditFormInfo.get('image')?.hasError('required')">
+        You need to enter user name
+      </div>
+    </div>
+    <button class="submit-click" (click)="sellerFormData(sellerEditFormInfo.value)">
+      Update
+    </button>
+  </form>
+</div>
+
+<div class="alert" [class.visible]="isVisible">
+  Updated<i class="bi bi-bag-check"></i>
+</div>

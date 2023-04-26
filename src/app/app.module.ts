@@ -11,7 +11,11 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SellerAddComponent } from './seller-add/seller-add.component';
-import { SellerListComponent } from './seller-list/seller-list.component'
+import { SellerListComponent } from './seller-list/seller-list.component';
+import { SellerEditComponent } from './seller-edit/seller-edit.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgIf } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,12 +25,13 @@ import { SellerListComponent } from './seller-list/seller-list.component'
     InvalidpathComponent,
     SellerHomeComponent,
     SellerAddComponent,
-    SellerListComponent
+    SellerListComponent,
+    SellerEditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,HttpClientModule,ReactiveFormsModule
+    AppRoutingModule,NgbCarouselModule,NgIf,
+    FormsModule,HttpClientModule,ReactiveFormsModule,NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

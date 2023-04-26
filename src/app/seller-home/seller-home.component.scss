@@ -4,3 +4,10 @@ table{
 .product-list td i{
   cursor: pointer;
 }
+.product-list img{
+  width: 100%;
+  height: 75px;
+}
+.product-list td .bi-pencil-square{
+  margin-left: 10px;
+}

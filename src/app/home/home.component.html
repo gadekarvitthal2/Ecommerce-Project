@@ -1,1 +1,35 @@
-<p>home works!</p>
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let item of allProductData">
+    <div class="picsum-img-wrapper">
+      <img src="{{ item.image }}" alt="Angular Carousel 1" />
+    </div>
+    <div class="carousel-caption">
+      <h3>Title Goes Here</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+                              <!-- Trandy Products -->
+<div class="heading-products">
+  <h1>Trendy Product</h1>
+</div>
+<div class="row product-container">
+  <div class="col-3 product-item">
+    <img
+      src="https://images.meesho.com/images/products/110991819/i092z_512.jpg"
+      alt=""
+    />
+    <div class="product-details">
+      <h5>This is Branded and Popular</h5>
+      <p>Price:3000</p>
+      <p>Color:Blue</p>
+    </div>
+    <div class="view-details-link">
+      <a href="">View Details</a>
+      <a href=""> Add to Cart</a>
+    </div>
+  </div>
+
+
+</div>

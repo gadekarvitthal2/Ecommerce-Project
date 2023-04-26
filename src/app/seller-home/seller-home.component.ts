@@ -6,7 +6,7 @@ import { Product } from '../seller';
 @Component({
   selector: 'app-seller-home',
   templateUrl: './seller-home.component.html',
-  styleUrls: ['./seller-home.component.scss']
+  styleUrls: ['./seller-home.component.scss'],
 })
 export class SellerHomeComponent implements OnInit{
   productData!:Product[];
@@ -15,12 +15,16 @@ export class SellerHomeComponent implements OnInit{
     this.getData();
   }
 
-  deleteItem(id:number) {
+  deleteItem(id:string) {
     console.log(id)
     this.productService.deleteProductItem(id).subscribe(data=>{
       console.log(data)
     })
     this.getData();
+  }
+
+  editItem(id:string) {
+    console.log(id)
   }
 
   getData(){
