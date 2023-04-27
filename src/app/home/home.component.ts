@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { Product } from '../seller';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +10,16 @@ import { ProductService } from '../services/product.service';
 export class HomeComponent implements OnInit{
   allProductData: any;
   showCarousel = true;
+  trendyProducts!: Product[];
 constructor(private productService:ProductService) {
 }
   ngOnInit(): void {
-    this.productService.getProductData().subscribe(data=>{
+    this.productService.getProductsForHome().subscribe(data=>{
       this.allProductData=data;
     })
+
+    this.productService.getTrendyProducts().subscribe(data=>{
+      this.trendyProducts=data
+    })
   }
-
-
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
-
 }

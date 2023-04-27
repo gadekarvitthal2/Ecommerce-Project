@@ -3,8 +3,28 @@
     <h1 routerLink="/">Ecomm</h1>
     <ng-container [ngSwitch]="menyType">
       <ng-container *ngSwitchCase="'default'">
-        <input type="text" class="search" />
-        <button class="serach-btn1">Search</button>
+        <input
+          type="text"
+          id="input_search"
+          class="search"
+          [(ngModel)]="inputTypedText"
+          #input_search
+          (blur)="searchResulthide()"
+          (input)="getSerchSuggesions()"
+        />
+        <button class="serach-btn1" (click)="SearchData(input_search)">Search</button>
+        <div class="isResultFound" *ngIf="isResultFound">
+          <p>No Result Found</p>
+        </div>
+        <!-- {{isResultFound | async}} -->
+        <div class="search-container" *ngIf="inputTypedText">
+          <div *ngFor="let item of searchSuggestionData">
+            <td>{{item.name}}</td>
+          </div>
+        </div>
+
+
+
         <ul class="snip1189">
           <li><a [routerLink]="['/']">Home</a></li>
           <li><a [routerLink]="['/auth-seller']">Seller</a></li>
@@ -17,7 +37,9 @@
         <li><a [routerLink]="['/seller-home']">Product List</a></li>
         <li><a [routerLink]="['/seller-add']">Add User</a></li>
         <li><a href="" (click)="sellerLogout()">Logout</a></li>
-        <li><a href="">{{this.sellerName}}</a></li>
+        <li>
+          <a href="">{{ this.sellerName }}</a>
+        </li>
       </ul>
     </ng-container>
   </nav>

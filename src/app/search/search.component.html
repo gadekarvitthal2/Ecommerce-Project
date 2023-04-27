@@ -1,0 +1,14 @@
+<div class="col-8 product-container" *ngFor="let item of searchResultData">
+  <a [routerLink]="['/details',item.id]">
+  <img
+    src="{{item.image}}"
+    alt="Image not found"
+  /></a>
+  <div class="item-lists">
+   <a [routerLink]="['/details',item.id]"><p>{{item.name}}</p></a>
+    <p>Price:{{item.price}}</p>
+    <p>Color:{{item.color}}</p>
+    <p>{{item.description}}</p>
+  </div>
+</div>
+

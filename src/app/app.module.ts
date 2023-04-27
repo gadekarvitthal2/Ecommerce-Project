@@ -16,6 +16,9 @@ import { SellerEditComponent } from './seller-edit/seller-edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgIf } from '@angular/common';
+import { SearchComponent } from './search/search.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,10 @@ import { NgIf } from '@angular/common';
     SellerHomeComponent,
     SellerAddComponent,
     SellerListComponent,
-    SellerEditComponent
+    SellerEditComponent,
+    SearchComponent,
+    FooterComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

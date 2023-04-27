@@ -8,6 +8,8 @@ import { SellerGuard } from './seller.guard';
 import { SellerAddComponent } from './seller-add/seller-add.component';
 import { SellerListComponent } from './seller-list/seller-list.component';
 import { SellerEditComponent } from './seller-edit/seller-edit.component';
+import { SearchComponent } from './search/search.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path:'seller-add',component:SellerAddComponent},
   {path:'seller-list',component:SellerListComponent},
   {path:'seller-edit/:id',component:SellerEditComponent},
+  {path:'search/:query',component:SearchComponent},
+ {path:'details/:productId',component:ProductDetailsComponent},
   {path:'**',component:InvalidpathComponent}
 ];
 
