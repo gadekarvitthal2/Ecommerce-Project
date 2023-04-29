@@ -19,6 +19,7 @@ import { NgIf } from '@angular/common';
 import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     SellerEditComponent,
     SearchComponent,
     FooterComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    UserAuthComponent
   ],
   imports: [
     BrowserModule,

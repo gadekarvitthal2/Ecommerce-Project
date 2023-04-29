@@ -19,26 +19,34 @@
         <!-- {{isResultFound | async}} -->
         <div class="search-container" *ngIf="inputTypedText">
           <div *ngFor="let item of searchSuggestionData">
-            <td>{{item.name}}</td>
+           <a [routerLink]="['/details',item.id]" (mousedown)="onMoveToDetails(item.id)"><td>{{item.name}}</td></a>
           </div>
         </div>
-
-
-
         <ul class="snip1189">
           <li><a [routerLink]="['/']">Home</a></li>
           <li><a [routerLink]="['/auth-seller']">Seller</a></li>
           <li><a href="">Login</a></li>
+          <li><a [routerLink]="['/user-auth']">SignUp</a></li>
           <li><a href="">Card(0)</a></li>
         </ul>
       </ng-container>
 
       <ul *ngSwitchCase="'seller'" class="seller-header snip1189">
         <li><a [routerLink]="['/seller-home']">Product List</a></li>
-        <li><a [routerLink]="['/seller-add']">Add User</a></li>
+        <li><a [routerLink]="['/seller-add']">Add Seller</a></li>
         <li><a href="" (click)="sellerLogout()">Logout</a></li>
         <li>
-          <a href="">{{ this.sellerName }}</a>
+          <a href="">{{ sellerName }}</a>
+        </li>
+      </ul>
+
+      <ul *ngSwitchCase="'userData'" class="seller-header snip1189">
+        <li><a [routerLink]="['/seller-home']">Product List</a></li>
+        <li><a [routerLink]="['/seller-add']">Add User</a></li>
+        <li><a [routerLink]="['/user-auth']">SignUp</a></li>
+        <li><a href="" (click)="userLogout()">Logout</a></li>
+        <li>
+          <a href="">{{ userName }}</a>
         </li>
       </ul>
     </ng-container>

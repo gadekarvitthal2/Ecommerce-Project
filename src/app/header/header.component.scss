@@ -14,14 +14,14 @@
   cursor: pointer;
 }
 .serach-btn1{
-  margin-left: -97px;
+  margin-left: -83px;
   border-left: none;
   border-width: 1px;
   height: 43px;
   background-color:rgb(175, 118, 230)
 }
 .main-nav nav input{
-  flex: 0.5;
+  flex: 0.7;
   justify-self: center;
   height: 43px;
 }
@@ -135,13 +135,18 @@ nav .seller-header li a{
   top: 4em;
   border-top: 0;
   background-color: white;
-  left: 441px;
+  left: 377px;
   z-index: 1000;
 }
 
-.search-container td{
+a{
+  text-decoration: none;
+}
+
+.search-container a td{
   border-top: 1px solid black;
   width: 308px;
+  text-decoration: none;
 }
 
 .isResultFound p{

@@ -18,3 +18,9 @@ export interface Product{
   color:string,
   id:string
 }
+
+export interface UserSingUp{
+  name:string,
+  email:string,
+  password:string
+}

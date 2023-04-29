@@ -19,9 +19,9 @@
       <button class="btn btn-buy">Buy Now</button>
 
       <div class="quantity-group">
-        <button>-</button>
-        <input type="text" name="" value="1" />
-        <button>+</button>
+        <button (click)="AddRemoveItem('min')">-</button>
+        <input type="text" name="" [value]="ProductCount" />
+        <button (click)="AddRemoveItem('add')">+</button>
       </div>
     </div>
   </div>

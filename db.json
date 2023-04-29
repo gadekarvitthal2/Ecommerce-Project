@@ -45,6 +45,36 @@
       "password": "asdf",
       "email": "a",
       "id": 8
+    },
+    {
+      "name": "vitthal",
+      "password": "vitthal@abc",
+      "email": "vitthal",
+      "id": 9
+    },
+    {
+      "name": "Vitthal Gadekar",
+      "password": "asdfsd",
+      "email": "sdfg",
+      "id": 10
+    },
+    {
+      "name": "vitthal",
+      "password": "12345",
+      "email": "vitthal@gmail.com",
+      "id": 11
+    },
+    {
+      "name": "Vitthal Gadekar",
+      "password": "vitthal@444",
+      "email": "vitthal@gmail.com",
+      "id": 12
+    },
+    {
+      "name": "shubham",
+      "password": "55555",
+      "email": "shubham@143",
+      "id": 13
     }
   ],
   "products": [
@@ -119,6 +149,26 @@
       "description": "Best wallet",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSClWPwL4WOOaNjJ7nEuGCAtbZtvKdGdGFcvNt3vQOS&s",
       "id": 8
+    }
+  ],
+  "users": [
+    {
+      "name": "vitthal gadekar",
+      "email": "vitthal@gmail.com",
+      "password": "Gadekar@444",
+      "id": 1
+    },
+    {
+      "name": "Shyam",
+      "email": "vitthal@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "Kevin",
+      "email": "kevin@gmail.com",
+      "password": "11111",
+      "id": 2
     }
   ]
 }

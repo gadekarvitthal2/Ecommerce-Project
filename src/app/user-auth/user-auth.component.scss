@@ -1,0 +1,65 @@
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-input button{
+  background-color: blueviolet;
+
+}
+.input{
+  margin-top: 10px;
+}
+.input input{
+  width: 137%;
+}
+
+.signup-click a:focus,a:hover{
+  text-decoration: underline !important;
+  cursor: pointer;
+  color: red;
+}
+.signin-click a:focus,a:hover{
+  text-decoration: underline !important;
+  cursor: pointer;
+  color: red;
+}
+
+.signup-click{
+  font-size: small;
+  padding-top: 10px;
+}
+.signup-click a{
+  font-size: small;
+  font-size: medium;
+  padding-left: 5px;
+  color: green;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.signin-click{
+  font-size: small;
+  padding-top: 10px;
+}
+.signin-click a{
+  font-size: small;
+  font-size: medium;
+  padding-left: 5px;
+  color: green;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.signinButton{
+  margin-top: 12px;
+}
+
+.signup-button{
+  margin-top: 12px;
+}
+span{
+  color: red;
+}

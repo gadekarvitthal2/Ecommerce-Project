@@ -9,6 +9,7 @@ import { Product } from '../seller';
   styleUrls: ['./product-details.component.scss']
 })
 export class ProductDetailsComponent implements OnInit{
+  ProductCount:number=1
   productData: undefined | Product;
 constructor(private aroute:ActivatedRoute,private product:ProductService) {}
   ngOnInit(): void {
@@ -16,7 +17,15 @@ constructor(private aroute:ActivatedRoute,private product:ProductService) {}
     productId && this.product.getProductsForShow(String(productId)).subscribe((data)=>{
       this.productData=data
     })
+  }
 
-
+  AddRemoveItem(data:string) {
+    if(this.ProductCount<20 && data=='add'){
+      this.ProductCount+=1;
+    }
+    else if(this.ProductCount>1 && data=='min'){
+      this.ProductCount-=1;
+    }
+    console.log(data);
   }
 }

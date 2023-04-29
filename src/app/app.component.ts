@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SellerService } from './services/seller.service';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,9 @@ import { SellerService } from './services/seller.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private sellerService:SellerService) {
+  constructor(private sellerService:SellerService,private userService:UserService) {
     this.sellerService.IsUserAlreayLogin();
+    this.userService.userLogout();
   }
   title = 'ecomm-project';
 

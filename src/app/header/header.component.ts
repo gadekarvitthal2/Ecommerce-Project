@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit,AfterContentInit{
   menyType:string='default'
   sellerName:any
   inputTypedText: any;
+  userName: any;
   constructor (private route:Router,private productService:ProductService) {}
 
   @ViewChild('input_search') inputText!:ElementRef
@@ -24,13 +25,17 @@ export class HeaderComponent implements OnInit,AfterContentInit{
   }
   ngOnInit(): void {
     this.route.events.subscribe((data:any)=>{
-      if(data.url && data.url=='/seller-home'){
-       this.menyType='seller'
-      }
-      if(localStorage.getItem('sellerLoginInfo')){
+      if(localStorage.getItem('sellerLoginInfo') && data.url && data.url=='/seller-home'){
        const sellerInfo =localStorage.getItem('sellerLoginInfo')
         this.sellerName=sellerInfo && JSON.parse(sellerInfo)
-        this.sellerName=this.sellerName[0].name
+        this.sellerName=this.sellerName?.name?this.sellerName?.name:this.sellerName[0]?.name
+        this.menyType='seller'
+      }
+       else if(data.url && data.url=='/user-auth'&& localStorage.getItem('userData')){
+        const userLoginData=localStorage.getItem('userData')
+        this.userName=userLoginData && JSON.parse(userLoginData);
+        this.userName=this.userName[0]?.name?this.userName[0]?.name:this.userName?.name;
+        this.menyType='userData'
       }
     })
 
@@ -39,6 +44,11 @@ export class HeaderComponent implements OnInit,AfterContentInit{
 
   sellerLogout() {
     localStorage.removeItem('sellerLoginInfo');
+    this.route.navigate(['/']);
+  }
+
+  userLogout(){
+    localStorage.removeItem('userData');
     this.route.navigate(['/']);
   }
 
@@ -59,10 +69,11 @@ export class HeaderComponent implements OnInit,AfterContentInit{
   SearchData(searchText:any) {
   this.route.navigate(['/search',searchText.value]);
 
-  // this.productService.getSearchedProducts(searchText.value)
-  // .subscribe(data=>{
-  //   console.log(data)
-  // })
+
+  }
+
+  onMoveToDetails(id:string) {
+    this.route.navigate(['/details',id])
   }
 
 }

@@ -1,0 +1,140 @@
+<ng-container *ngIf="!isLogin">
+  <div class="form-container">
+    <form #formInfo="ngForm" (ngSubmit)="signUpFormData(formInfo)">
+      <div class="form-group input">
+        <label for="exampleInputName">User Name</label>
+        <input
+          type="text"
+          name="name"
+          #name="ngModel"
+          ngModel
+          class="form-control"
+          id="exampleInputName"
+          aria-describedby="emailHelp"
+          placeholder="Enter Name"
+          required
+          minlength="2"
+          maxlength="20"
+        />
+      </div>
+      <ng-container *ngIf="name.touched || name.dirty">
+        <span *ngIf="name.invalid"> This field is Required</span>
+        <span *ngIf="name.errors?.['minlength']"> minimum legth is 2</span>
+        <span *ngIf="name.errors?.['maxlength']"> minimum legth is 20</span>
+      </ng-container>
+
+      <div class="form-group input">
+        <label for="exampleInputEmail1">Email address</label>
+        <input
+          type="email"
+          name="email"
+          #email="ngModel"
+          ngModel
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+          required
+          minlength="2"
+          maxlength="20"
+        />
+      </div>
+      <ng-container *ngIf="email.touched || email.dirty">
+        <span *ngIf="email.invalid"> This field is Required</span>
+        <span *ngIf="email.errors?.['minlength']"> minimum legth is 2</span>
+        <span *ngIf="email.errors?.['maxlength']"> minimum legth is 20</span>
+      </ng-container>
+
+      <div class="form-group input">
+        <label for="exampleInputPassword1">Password</label>
+        <input
+          type="password"
+          name="password"
+          #password="ngModel"
+          ngModel
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Password"
+          required
+          minlength="2"
+          maxlength="20"
+        />
+      </div>
+      <ng-container *ngIf="password.touched || password.dirty">
+        <span *ngIf="password.invalid"> This field is Required</span>
+        <span *ngIf="password.errors?.['minlength']"> minimum legth is 2</span>
+        <span *ngIf="password.errors?.['maxlength']"> minimum legth is 20</span>
+      </ng-container>
+
+      <div class="form-input">
+        <button type="submit" class="btn btn-primary signinButton">
+          Submit
+        </button>
+      </div>
+      <div class="form-group">
+        <p class="signin-click">
+          Already Login<a (click)="goToSignIn()">Click Here</a>
+        </p>
+      </div>
+      <div><span *ngIf="isValidUser">Wrong username or password</span></div>
+    </form>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isLogin">
+  <div class="form-container">
+    <form #LoginformInfo="ngForm" (ngSubmit)="LoginFormData(LoginformInfo)">
+      <div class="form-group input">
+        <label for="loginInputEmail1">Email address</label>
+        <input
+          type="email"
+          name="email"
+          ngModel
+          #name="ngModel"
+          class="form-control"
+          id="loginInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+          required
+          minlength="2"
+          maxlength="20"
+        />
+        <ng-container *ngIf="name.touched || name.dirty">
+          <span *ngIf="name.invalid"> This field is Required</span>
+          <span *ngIf="name.errors?.['minlength']"> minimum legth is 2</span>
+          <span *ngIf="name.errors?.['maxlength']"> minimum legth is 20</span>
+        </ng-container>
+      </div>
+      <div class="form-group input">
+        <label for="loginInputPassword1">Password</label>
+        <input
+          type="password"
+          name="password"
+          ngModel
+          #password="ngModel"
+          class="form-control"
+          id="loginInputPassword1"
+          placeholder="Password"
+          required
+          minlength="2"
+          maxlength="20"
+        />
+      </div>
+      <ng-container *ngIf="password.touched || password.dirty">
+        <span *ngIf="password.invalid"> This field is Required</span>
+        <span *ngIf="password.errors?.['minlength']"> minimum legth is 2</span>
+        <span *ngIf="password.errors?.['maxlength']"> minimum legth is 20</span>
+      </ng-container>
+      <div class="form-input">
+        <button type="submit" class="btn btn-primary signup-button">
+          Submit
+        </button>
+        <div><span *ngIf="isValidUser">Wrong username or password</span></div>
+        <p class="signup-click">
+          Don't Have an Account <a (click)="goToSignup()">Signup</a>
+        </p>
+      </div>
+
+    </form>
+  </div>
+</ng-container>

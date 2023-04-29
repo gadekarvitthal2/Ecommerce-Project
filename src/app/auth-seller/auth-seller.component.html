@@ -24,7 +24,7 @@
         ngModel
         placeholder="Enter Email"
       />
-      <button type="submit">Submit</button>
+      <button type="submit" class="submit-button">Submit</button>
       <p class="signup-click">Alrady Login <a (click)="goToSignIn()">Click here</a></p>
     </form>
   </ng-container>
@@ -56,7 +56,7 @@
     <div class="form-control-feedback" *ngIf="formLoginData.valid && (formLoginData.dirty || formLoginData.touched)">
       <p *ngIf="isValidUsernamePassword">Invalid Username or Password</p>
     </div>
-      <button type="submit">Submit</button>
+      <button type="submit" class="submit-button">Submit</button>
       <p class="signin-click">Don't I have an Account<a (click)="goToSignUp()">Signup</a></p>
     </form>
   </ng-container>

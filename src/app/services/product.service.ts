@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Product, SellerData } from '../seller';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +10,7 @@ export class ProductService {
 
   isSearchResultFound$=new BehaviorSubject<boolean>(false);
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private router:Router) { }
 
   postProductData(data:any):Observable<object> {
     return this.http.post<object>('http://localhost:3000/products',data)
